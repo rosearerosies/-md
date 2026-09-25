@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "网页与视频转 Markdown",
+  "version": "0.2.0",
+  "description": "将当前网页、文章或可访问字幕导出为 Markdown。",
+  "permissions": ["activeTab", "scripting", "storage", "downloads"],
+  "host_permissions": ["https://*/*", "http://*/*"],
+  "background": { "service_worker": "src/background/service-worker.js", "type": "module" },
+  "action": { "default_popup": "src/popup/popup.html", "default_title": "导出 Markdown" },
+  "options_page": "src/options/options.html",
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": [
+      "src/content/shared.js",
+      "src/content/adapters.js",
+      "src/content/extractor.js"
+    ],
+    "run_at": "document_idle"
+  }]
+}
