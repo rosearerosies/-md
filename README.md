@@ -4,10 +4,30 @@ Chrome Manifest V3 插件。它提取当前网页的可见文章内容，或视�
 
 ## 安装
 
-1. 打开 `chrome://extensions`。
-2. 开启右上角的开发者模式。
-3. 点击“加载已解压的扩展程序”。
-4. 选择本项目根目录。
+发布到扩展商店后，可以通过下面的入口直接安装：
+
+- [安装到 Chrome](https://chromewebstore.google.com/)
+- [安装到 Edge](https://microsoftedge.microsoft.com/addons/)
+
+当前项目尚未发布到 Chrome Web Store 或 Microsoft Edge Add-ons。完成商店审核后，需要将上面两个链接替换为实际的扩展详情页地址。
+
+在商店发布前，可以从 GitHub 下载源码并手动安装：
+
+1. 下载仓库 ZIP 并解压。
+2. 打开 `chrome://extensions` 或 `edge://extensions`。
+3. 开启“开发者模式”。
+4. 点击“加载已解压的扩展程序”，选择解压后的项目目录。
+
+GitHub 本身不能直接安装未上架的浏览器扩展，也不能通过普通网页链接绕过浏览器安全限制完成安装。
+
+### 发布商店后替换链接
+
+审核通过后，将上面的链接替换为实际详情页地址：
+
+- Chrome：`https://chromewebstore.google.com/detail/扩展名称/扩展ID`
+- Edge：`https://microsoftedge.microsoft.com/addons/detail/扩展名称/扩展ID`
+
+用户点击详情页中的“添加至 Chrome”或“获取”按钮即可安装。
 
 ## 使用
 
